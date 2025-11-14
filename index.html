@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Nenek - Web Resep Tradisional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="beranda">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Resep Nenek</h1>
+                <p class="tagline">Resep Tradisional dengan Cerita Budaya</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#resep">Resep</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Warisan Kuliner Nusantara</h2>
+            <p>Jelajahi resep tradisional yang telah diturunkan dari generasi ke generasi dengan sentuhan budaya Jawa yang kaya</p>
+            <button class="cta-button">Jelajahi Resep</button>
+        </div>
+        <div class="hero-decoration">
+            <div class="batik-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Modal Resep -->
+    <div id="resepModal" class="modal" style="display:none;">
+        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <div class="modal-scroll-content">
+                <h2 id="modal-title"></h2>
+                <p id="modal-cerita" class="modal-cerita"></p>
+                <h3>Bahan & Alat</h3>
+                <ul id="modal-bahan"></ul>
+                <h3>Cara Membuat</h3>
+                <ol id="modal-cara"></ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resep Section -->
+    <section class="resep-section" id="resep">
+        <div class="section-header">
+            <h2>Koleksi Resep Tradisional</h2>
+            <p>Pilihan autentik dari dapur nenek kami</p>
+        </div>
+
+        <div class="resep-container">
+            <!-- Resep 1 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/gadogado.jpg" alt="Gado-gado">
+                    <span class="resep-badge">Jawa</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Gado-gado</h3>
+                    <p class="resep-desc">Sajian terpadu dari berbagai sayuran dengan saus kacang kental yang gurih dan menggugah selera.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 30 menit</span>
+                        <span><i class="fas fa-star"></i> Mudah</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 2 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/sotoayam.jpeg" alt="Soto Ayam">
+                    <span class="resep-badge">Tradisional</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Soto Ayam</h3>
+                    <p class="resep-desc">Kuah emas kunyit yang hangat dengan aroma rempah yang khas menjadikan hidangan ini istimewa.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 45 menit</span>
+                        <span><i class="fas fa-star"></i> Sedang</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 3 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/rendang.jpg" alt="Rendang">
+                    <span class="resep-badge">Favorit</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Rendang Daging</h3>
+                    <p class="resep-desc">Masakan legendaris dengan kelapa dan rempah yang meresap sempurna ke dalam daging empuk.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 90 menit</span>
+                        <span><i class="fas fa-star"></i> Sulit</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 4 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/lumpia.jpg" alt="Lumpia">
+                    <span class="resep-badge">Jawa</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Lumpia Goreng</h3>
+                    <p class="resep-desc">Gulung emas berisi daging cincang dan sayuran yang renyah dan nikmat untuk camilan favorit.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 40 menit</span>
+                        <span><i class="fas fa-star"></i> Mudah</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 5 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/bakso.jpeg" alt="Bakso">
+                    <span class="resep-badge">Tradisional</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Bakso Tradisional</h3>
+                    <p class="resep-desc">Bola daging empuk dalam kuah kaldu yang gurih, campur dengan mie dan sayuran segar.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 60 menit</span>
+                        <span><i class="fas fa-star"></i> Sedang</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 6 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/pecel.jpg" alt="Pecel">
+                    <span class="resep-badge">Jawa</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Pecel</h3>
+                    <p class="resep-desc">Sayuran rebus dengan sambal kacang yang kaya rasa, dilengkapi dengan tahu dan telur goreng.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 25 menit</span>
+                        <span><i class="fas fa-star"></i> Mudah</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 7 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/bikaambon.jpg" alt="Bika Ambon">
+                    <span class="resep-badge">Dessert</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Bika Ambon</h3>
+                    <p class="resep-desc">Kue tradisional Medan yang berpori dengan tekstur lembut, rasa manis dan gurih dari kelapa yang sempurna.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 50 menit</span>
+                        <span><i class="fas fa-star"></i> Sedang</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 8 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/gudeg.jpg" alt="Gudeg">
+                    <span class="resep-badge">Spesial</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Gudeg</h3>
+                    <p class="resep-desc">Masakan Yogyakarta legendaris dengan nangka muda yang dimasak dalam santan kental dan rempah pilihan.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 120 menit</span>
+                        <span><i class="fas fa-star"></i> Sulit</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 9 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/pempek.jpg" alt="Pempek">
+                    <span class="resep-badge">Favorit</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Pempek</h3>
+                    <p class="resep-desc">Makanan Palembang autentik dari tepung tapioka dan telur dengan kuah cuko yang gurih dan asam segar.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 60 menit</span>
+                        <span><i class="fas fa-star"></i> Sedang</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+
+            <!-- Resep 10 -->
+            <div class="resep-card">
+                <div class="resep-image">
+                    <img src="images/rawon.jpg" alt="Rawon">
+                    <span class="resep-badge">Tradisional</span>
+                </div>
+                <div class="resep-content">
+                    <h3>Rawon</h3>
+                    <p class="resep-desc">Sup Surabaya kental berwarna hitam dari kluwak, daging sapi empuk dalam kuah yang kaya rasa dan bumbu.</p>
+                    <div class="resep-info">
+                        <span><i class="fas fa-clock"></i> 90 menit</span>
+                        <span><i class="fas fa-star"></i> Sulit</span>
+                    </div>
+                    <button class="resep-button">Lihat Resep</button>
+                </div>
+            </div>
+                <!-- Resep 11 -->
+                <div class="resep-card">
+                    <div class="resep-image">
+                        <img src="images/mieaceh.jpg" alt="Mie Aceh">
+                        <span class="resep-badge">Aceh</span>
+                    </div>
+                    <div class="resep-content">
+                        <h3>Mie Aceh</h3>
+                        <p class="resep-desc">Mie pedas khas Aceh dengan rempah melimpah, daging sapi/seafood, dan kuah kental yang menggugah selera.</p>
+                        <div class="resep-info">
+                            <span><i class="fas fa-clock"></i> 45 menit</span>
+                            <span><i class="fas fa-star"></i> Sedang</span>
+                        </div>
+                        <button class="resep-button">Lihat Resep</button>
+                    </div>
+                </div>
+                <!-- Resep 12 -->
+                <div class="resep-card">
+                    <div class="resep-image">
+                        <img src="images/ayam_betutu.jpg" alt="Ayam Betutu">
+                        <span class="resep-badge">Bali</span>
+                    </div>
+                    <div class="resep-content">
+                        <h3>Ayam Betutu</h3>
+                        <p class="resep-desc">Ayam utuh berbumbu khas Bali yang dimasak perlahan hingga empuk dan kaya rempah, cocok untuk acara istimewa.</p>
+                        <div class="resep-info">
+                            <span><i class="fas fa-clock"></i> 120 menit</span>
+                            <span><i class="fas fa-star"></i> Sulit</span>
+                        </div>
+                        <button class="resep-button">Lihat Resep</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="tentang">
+        <div class="about-container">
+            <div class="about-text" >
+                <h2 >Tentang Resep Nenek</h2>
+                <p>Website ini adalah sebuah platform untuk melestarikan dan membagikan warisan kuliner nusantara yang telah diturunkan turun-temurun. Setiap resep yang kami bagikan membawa cerita budaya dan nilai-nilai kehidupan dari masyarakat Jawa yang kaya.</p>
+                <p>Kami percaya bahwa makanan bukan hanya tentang kelezatan, tetapi juga tentang cinta, tradisi, dan koneksi dengan masa lalu. Mari bersama-sama menjaga kelestarian budaya kuliner Indonesia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Resep Nenek - Melestarikan Warisan Kuliner Nusantara</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/moh__hattaa/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/KulinerJava"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
